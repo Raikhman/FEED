@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>Кормление Электронный учебно-методический комплекс</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="noindex,follow" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ 
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { font-size: 1em }
+       .heading1 { color: #000; text-decoration: none; }
+       .heading2 { color: #000; text-decoration: none; }
+       .heading3 { color: #000; text-decoration: none; }
+       .heading4 { color: #000; text-decoration: none; }
+       .heading5 { color: #000; text-decoration: none; }
+       .heading6 { color: #000; text-decoration: none; }
+
+       .hilight1 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight2 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight3 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight4 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight5 { color: #FFFFFF; background: #404040; text-decoration: none; }
+       .hilight6 { color: #FFFFFF; background: #404040; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding:0; margin:0 }
+       #toc li { 
+			margin-top:2px; 
+			margin-left:0; 
+			padding: 1px;
+			background-position: 0px 3px !important;
+			background-size: 18px 18px !important;
+            padding-left: 23px !important;
+			}
+       #toc ul { padding-left:0; margin-left:0px }       
+       /* TOC LIST CSS */
+       
+       @media (pointer: coarse) {
+         body    { transform-origin: 0 0;
+		   transform:scale(1.25); 
+		   max-width: 80%;
+       }       
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+   	   var hiTest = /^hilight/im,
+			parentScope = (parent.hmNavigationFrame);
+		if (parentScope) parent.currentNav("toc");
+		$("a[class^='heading']").on("click",function(event){
+			var doSwipe = (hiTest.test($(this).children("span").first().attr("class")) || false || (parentScope && !parent.hmBrowser.nonDeskTouch));
+			if (doSwipe && parentScope) {
+			window.parent.showNav("toggle");
+			}
+			});
+     });
+   </script>
+      <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="vvedenie.html" target="hmcontent"><span class="heading1" id="s1">Введение</span></a>
+</li>
+<li class="heading1" id="i2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="soderzanie.html" target="hmcontent"><span class="heading1" id="s2">Содержание</span></a>
+</li>
+<li class="heading1" id="i3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="titulny_list.html" target="hmcontent"><span class="heading1" id="s3">Титульный лист</span></a>
+</li>
+<li class="heading1" id="i4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="retsenzii.html" target="hmcontent"><span class="heading1" id="s4">Рецензии и Регистрация</span></a>
+</li>
+<li class="heading1" id="i5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="ob_avtore.html" target="hmcontent"><span class="heading1" id="s5">Об авторе</span></a>
+</li>
+<li class="heading1" id="i6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="second-topic.html" target="hmcontent"><span class="heading1" id="s6">Аннотация</span></a>
+</li>
+<li class="heading1" id="i7" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="new-topic3.html" target="hmcontent"><span class="heading1" id="s7" ondblclick="return dblclicked(this)">Теоретический раздел</span></a>
+<ul id="ul7" style="list-style-type:none">
+<li class="heading2" id="i7.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.1" href="--.html" target="hmcontent"><span class="heading2" id="s7.1">Тематические планы лекций</span></a>
+</li>
+<li class="heading2" id="i7.2" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.2" href="new-topic22.html" target="hmcontent"><span class="heading2" id="s7.2" ondblclick="return dblclicked(this)">Курс Лекций</span></a>
+<ul id="ul7.2" style="list-style-type:none">
+<li class="heading3" id="i7.2.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.1" href="lecture1.html" target="hmcontent"><span class="heading3" id="s7.2.1">Лекция 1</span></a>
+</li>
+<li class="heading3" id="i7.2.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.2" href="lecture2.html" target="hmcontent"><span class="heading3" id="s7.2.2">Лекция 2</span></a>
+</li>
+<li class="heading3" id="i7.2.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.3" href="lecture3.html" target="hmcontent"><span class="heading3" id="s7.2.3">Лекция 3</span></a>
+</li>
+<li class="heading3" id="i7.2.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.4" href="lecture4.html" target="hmcontent"><span class="heading3" id="s7.2.4">Лекция 4</span></a>
+</li>
+<li class="heading3" id="i7.2.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.5" href="new-topic27.html" target="hmcontent"><span class="heading3" id="s7.2.5">Лекция 5</span></a>
+</li>
+<li class="heading3" id="i7.2.6" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.6" href="lecture_6.html" target="hmcontent"><span class="heading3" id="s7.2.6">Лекция 6</span></a>
+</li>
+<li class="heading3" id="i7.2.7" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.7" href="lecture_7.html" target="hmcontent"><span class="heading3" id="s7.2.7">Лекция 7</span></a>
+</li>
+<li class="heading3" id="i7.2.8" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.8" href="lecture_8.html" target="hmcontent"><span class="heading3" id="s7.2.8">Лекция 8</span></a>
+</li>
+<li class="heading3" id="i7.2.9" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.9" href="lecture_9.html" target="hmcontent"><span class="heading3" id="s7.2.9">Лекция 9</span></a>
+</li>
+<li class="heading3" id="i7.2.10" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.10" href="lecture10.html" target="hmcontent"><span class="heading3" id="s7.2.10">Лекция 10</span></a>
+</li>
+<li class="heading3" id="i7.2.11" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.11" href="lecture11.html" target="hmcontent"><span class="heading3" id="s7.2.11">Лекция 11</span></a>
+</li>
+<li class="heading3" id="i7.2.12" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.12" href="lecture12.html" target="hmcontent"><span class="heading3" id="s7.2.12">Лекция 12</span></a>
+</li>
+<li class="heading3" id="i7.2.13" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.13" href="lecture13.html" target="hmcontent"><span class="heading3" id="s7.2.13">Лекция 13</span></a>
+</li>
+<li class="heading3" id="i7.2.14" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.14" href="lecture14.html" target="hmcontent"><span class="heading3" id="s7.2.14">Лекция 14</span></a>
+</li>
+<li class="heading3" id="i7.2.15" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.15" href="lecture15.html" target="hmcontent"><span class="heading3" id="s7.2.15">Лекция 15</span></a>
+</li>
+<li class="heading3" id="i7.2.16" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.16" href="lecture16.html" target="hmcontent"><span class="heading3" id="s7.2.16">Лекция 16</span></a>
+</li>
+<li class="heading3" id="i7.2.17" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a7.2.17" href="lecture17.html" target="hmcontent"><span class="heading3" id="s7.2.17">Лекция 17</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i7.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.3" href="demo_material.html" target="hmcontent"><span class="heading2" id="s7.3">Демонстрационные материалы</span></a>
+</li>
+<li class="heading2" id="i7.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a7.4" href="uchebniki.html" target="hmcontent"><span class="heading2" id="s7.4">Учебники и пособия</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i8" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a8" href="new-topic20.html" target="hmcontent"><span class="heading1" id="s8" ondblclick="return dblclicked(this)">Практический раздел</span></a>
+<ul id="ul8" style="list-style-type:none">
+<li class="heading2" id="i8.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.1" href="tplan_lab.html" target="hmcontent"><span class="heading2" id="s8.1">Темпланы лабораторных занятий</span></a>
+</li>
+<li class="heading2" id="i8.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.2" href="perechen_lab.html" target="hmcontent"><span class="heading2" id="s8.2">Примерный перечень лабораторных занятий</span></a>
+</li>
+<li class="heading2" id="i8.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.3" href="topic.html" target="hmcontent"><span class="heading2" id="s8.3">Методические указания</span></a>
+</li>
+<li class="heading2" id="i8.4" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.4" href="new-topic28.html" target="hmcontent"><span class="heading2" id="s8.4" ondblclick="return dblclicked(this)">Лабораторные задания</span></a>
+<ul id="ul8.4" style="list-style-type:none">
+<li class="heading3" id="i8.4.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a8.4.1" href="new-topic30.html" target="hmcontent"><span class="heading3" id="s8.4.1">Лабораторное занятие 1</span></a>
+</li>
+<li class="heading3" id="i8.4.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a8.4.2" href="new-topic31.html" target="hmcontent"><span class="heading3" id="s8.4.2">Лабораторное занятие 2</span></a>
+</li>
+<li class="heading3" id="i8.4.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a8.4.3" href="new-topic32.html" target="hmcontent"><span class="heading3" id="s8.4.3">Лабораторное занятие 3</span></a>
+</li>
+<li class="heading3" id="i8.4.4" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a8.4.4" href="new-topic33.html" target="hmcontent"><span class="heading3" id="s8.4.4">Лабораторное занятие 4</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i8.5" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a8.5" href="new-topic29.html" target="hmcontent"><span class="heading2" id="s8.5">Расчетные задачи</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i9" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a9" href="chapter-2.html" target="hmcontent"><span class="heading1" id="s9" ondblclick="return dblclicked(this)">Раздел Контроль знаний</span></a>
+<ul id="ul9" style="list-style-type:none">
+<li class="heading2" id="i9.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.1" href="new-topic8.html" target="hmcontent"><span class="heading2" id="s9.1">Билеты</span></a>
+</li>
+<li class="heading2" id="i9.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.2" href="--3.html" target="hmcontent"><span class="heading2" id="s9.2">Вопросы&nbsp;</span></a>
+</li>
+<li class="heading2" id="i9.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a9.3" href="new-topic9.html" target="hmcontent"><span class="heading2" id="s9.3">Тэсты</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i10" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a10" href="new-topic5.html" target="hmcontent"><span class="heading1" id="s10" ondblclick="return dblclicked(this)">Раздел Вспомогательный</span></a>
+<ul id="ul10" style="list-style-type:none">
+<li class="heading2" id="i10.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.1" href="new-topic15.html" target="hmcontent"><span class="heading2" id="s10.1">Типовая программа</span></a>
+</li>
+<li class="heading2" id="i10.2" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.2" href="new-topic2.html" target="hmcontent"><span class="heading2" id="s10.2">Учебная программа</span></a>
+</li>
+<li class="heading2" id="i10.3" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a10.3" href="uchmetkarty.html" target="hmcontent"><span class="heading2" id="s10.3">УчебноМетодические Карты</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i11" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a11" href="new-topic16.html" target="hmcontent"><span class="heading1" id="s11" ondblclick="return dblclicked(this)">Раздел Программное обеспечение</span></a>
+<ul id="ul11" style="list-style-type:none">
+<li class="heading2" id="i11.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a11.1" href="new-topic17.html" target="hmcontent"><span class="heading2" id="s11.1">Список программ по курсу</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i12" data-bg="cicon1.png;cicon2.png" style="background:url(cicon2.png) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a12" href="topic2.html" target="hmcontent"><span class="heading1" id="s12" ondblclick="return dblclicked(this)">Видеоматериалы</span></a>
+<ul id="ul12" style="list-style-type:none">
+<li class="heading2" id="i12.1" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a12.1" href="yoitube.html" target="hmcontent"><span class="heading2" id="s12.1">Видео с YouTube</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i13" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a13" href="new-topic34.html" target="hmcontent"><span class="heading1" id="s13">Графическая информация</span></a>
+</li>
+<li class="heading1" id="i14" style="background:url(cicon9.png) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a14" href="dla_razrabotchikov.html" target="hmcontent"><span class="heading1" id="s14">Для разработчиков</span></a>
+</li>
+</ul>
+<script type="text/javascript">loadicons('cicon9.png','cicon2.png','cicon1.png');</script>
+</body>
+</html>
